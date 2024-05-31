@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Marry Me?</title>
+    <style>
+        body {
+            font-family: 'Caveat', cursive;
+            text-align: center;
+            background-color: #00008B; /* Dark Blue */
+            margin: 0;
+            padding: 0;
+        }
+        #proposal {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #FFF; /* White */
+            font-size: 48px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #FFF; /* White */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #yes, #no {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        #yes:hover {
+            background-color: #45a049;
+        }
+        #no:hover {
+            background-color: #d32f2f;
+        }
+        #no-message, #yes-message {
+            display: none;
+            font-family: 'Caveat', cursive;
+            color: #FFF; /* White */
+            font-size: 28px;
+            margin-top: 20px;
+            font-weight: normal;
+        }
+        .sticker {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #button-container {
+            margin-top: 20px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="proposal">
+        <h1>Will You Marry Me?</h1>
+        <p>My Dearest Adiba ,</p>
+        <p>After spending countless moments together, laughing, loving, and supporting each other,</p>
+        <p>I've come to realize that you are the one I want to spend the rest of my life with.</p>
+        <p>Will you make me the happiest person in the world by saying <strong>"Yes!"</strong>?</p>
+        <div>
+            <div class="sticker" onclick="showYesMessage()">
+                <img src="https://emojicdn.elk.sh/🥺" alt="Please say Yes" width="50" height="50">
+            </div>
+            <div class="sticker" onclick="showNoMessage()">
+                <img src="https://emojicdn.elk.sh/😞" alt="Please say No" width="50" height="50">
+            </div>
+        </div>
+        <div id="button-container">
+            <button id="yes" onclick="showYesMessage()">Yes!</button>
+            <button id="no" onclick="showNoMessage()">No</button>
+        </div>
+        <span id="yes-message">হু ঠিক আসে....না করলে খবর অসিলো</span>
+        <span id="no-message">না করলে পিডা দিমু</span>
+    </div>
+    <script>
+        function showYesMessage() {
+            document.getElementById("yes-message").style.display = "inline";
+        }
+        
+        function showNoMessage() {
+            document.getElementById("no-message").style.display = "inline";
+        }
+    </script>
+</body>
+</html>
